@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Tu tienda de tecnología</title>
+    <!-- Usamos Tailwind CSS para darle un diseño moderno y llamativo rápidamente -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Home/style.css">
+
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+    <!-- ================= PASO 1: NAVBAR (BARRA DE NAVEGACIÓN) ================= -->
+    <!-- SUGERENCIA DE COMMIT: git commit -m "feat: agregar barra de navegación principal" -->
+    <nav class="bg-slate-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <svg class="h-8 w-8 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <span class="font-bold text-xl tracking-wider">Tech<span class="text-blue-500">Store</span></span>
+                </div>
+                <!-- Menú de enlaces (Desktop) -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-300 hover:text-white transition duration-300 font-medium">Inicio</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition duration-300 font-medium">Laptops</a>
+                    <a href="#"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">Smartphones</a>
+                    <a href="#"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">Accesorios</a>
+                </div>
+                <!-- Icono de Carrito -->
+                <div class="flex items-center">
+                    <button class="text-gray-300 hover:text-white relative p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <span
+                            class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/4 -translate-y-1/4 bg-red-600 rounded-full">3</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ================= FIN PASO 1 ================= -->
+
+    <!-- ================= PASO 2: CARRUSEL (HERO SECTION) ================= -->
+    <!-- SUGERENCIA DE COMMIT: git commit -m "feat: implementar carrusel de imágenes de ofertas" -->
+    <header class="relative w-full h-[60vh] min-h-[400px] bg-gray-900 overflow-hidden group">
+        <div id="carousel-container" class="relative w-full h-full">
+
+            <!-- Slide 1 -->
+            <div class="carousel-slide active bg-cover bg-center"
+                style="background-image: url('https://images.unsplash.com/photo-1498049794561-7780e7231661?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="text-center px-4">
+                        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">El futuro en tus manos
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto drop-shadow-md">Descubre la
+                            nueva generación de equipos de alto rendimiento para profesionales y gamers.</p>
+                        <button
+                            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105">Ver
+                            Ofertas</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide bg-cover bg-center"
+                style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
+                <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+                    <div class="text-center px-4">
+                        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">Retro & Moderno</h1>
+                        <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto drop-shadow-md">Consolas,
+                            periféricos y lo mejor del mundo del entretenimiento digital.</p>
+                        <button
+                            class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105">Explorar
+                            Gaming</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-slide bg-cover bg-center"
+                style="background-image: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="text-center px-4">
+                        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">Conectividad Total
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto drop-shadow-md">Smartphones de
+                            última generación con cámaras increíbles y baterías de larga duración.</p>
+                        <button
+                            class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105">Comprar
+                            Ahora</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controles del carrusel -->
+        <button id="prevBtn"
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-70 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-20">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        <button id="nextBtn"
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-70 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-20">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+    </header>
+    <!-- ================= FIN PASO 2 ================= -->
+
+
+
+
+</body>
+
+</html>
